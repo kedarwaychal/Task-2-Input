@@ -1,0 +1,75 @@
+<!-- app.component.html -->
+<!-- <form action="">
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="name">
+      </div>
+      
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" [(ngModel)]="age">
+      </div>
+      
+      <div>
+        <label for="contact">Contact:</label>
+        <select id="contact" [(ngModel)]="contactMethod" (change)="onChangeContactMethod()">
+          <option value="phone">Phone</option>
+          <option value="email">Email</option>
+        </select>
+      </div>
+      
+      <div *ngIf="contactMethod === 'phone'">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" [(ngModel)]="phoneNumber">
+      </div>
+      
+      <div *ngIf="contactMethod === 'email'">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email">
+      </div>
+
+</form> -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-6">
+        <form>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="exampleInputEmail1" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="exampleInputPassword1" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <label for=""> How we Contact You?:</label>
+              <br>
+              <select  class="select w-100" id="contact" name="select" [(ngModel)]="contactMethod">
+                <option value="phoneNumber"><a class="dropdown-item" >Phone</a></option>
+                <option value="email"><a class="dropdown-item">Email</a></option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3" *ngIf="contactMethod == 'phoneNumber'">
+                <label for="exampleInputPassword1" class="form-label">Phone</label>
+                <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="Phone">
+              </div>
+              <div class="mb-3" *ngIf="contactMethod == 'email'">
+                <label for="exampleInputPassword1" class="form-label">Email</label>
+                <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="Email">
+              </div>
+          </div>
+        </div>
+    </form>
+        
+      </div>
+  </div>
+</div>
+
+
+
+  

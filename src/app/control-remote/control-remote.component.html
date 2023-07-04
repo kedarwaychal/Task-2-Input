@@ -1,0 +1,45 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-6">
+        <form>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="exampleInputEmail1" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mt-3">
+                <div class="mb-3 form-check">
+                  <label for="contact">How we Contact You?:</label>
+                  <!-- <select id="contact" name="select" [(ngModel)]="contactMethod" >
+                    <option value="phoneNumber">Phone</option>
+                    <option value="email">Email</option>
+                  </select> -->
+                  <br><br>
+                  <input type="radio" class="mr-3" name="phoneNumber" value="phoneNumber" [(ngModel)]="contactMethod">
+                  <label for="">Phone</label>
+                  <input type="radio" class="ml-3 mr-3" name="email" value="email" [(ngModel)]="contactMethod">
+                  <label for="">Email</label>
+                </div>
+              </div>
+              <div class="col-md-6 mt-3">
+                <div class="mb-3" *ngIf="contactMethod == 'phoneNumber'">
+                  <label for="exampleInputPassword1" class="form-label">Phone</label>
+                  <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="Phone">
+                </div>
+                <div class="mb-3" *ngIf="contactMethod == 'email'">
+                  <label for="exampleInputPassword1" class="form-label">Email</label>
+                  <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                </div>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+</div>
